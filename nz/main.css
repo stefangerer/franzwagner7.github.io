@@ -9,7 +9,8 @@ header {
 }
 
 img.user {
-    border-radius: 2%
+    border-radius: 2%;
+    margin-top: -50px;
 }
 
 main {
@@ -29,4 +30,8 @@ article p {
 
 a {
     color: black
+}
+
+footer {
+    border-top: 1px solid black;
 }
