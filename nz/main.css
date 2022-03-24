@@ -26,6 +26,9 @@ main {
 article {
     padding: 1em;
 }
+article figure img {
+    width: 100%;
+}
 
 article p {
     text-align: justify;
