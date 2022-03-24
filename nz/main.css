@@ -7,4 +7,9 @@ body {
 main {
     background-color: white;
     max-width: 1024px;
+    margin: auto;
+}
+
+article {
+    padding: 1em
 }
