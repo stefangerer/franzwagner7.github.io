@@ -1,4 +1,4 @@
-// Neuseelandreise Skript
+// Neuseelandreise Skript we
 
 var map = L.map('map').setView([-39.195, 175.620], 5);
 
