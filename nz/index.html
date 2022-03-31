@@ -9,8 +9,16 @@
     <!-- Stile einbauen -->
     <link rel="stylesheet" href="main.css">
     <!-- Font awesome einbauen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Leaflet Bibliothek-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
 </head>
 
@@ -19,7 +27,8 @@
     <main class="shadow">
         <header>
             <img src="images/header.jpg" class="banner" alt="Straße im Vordergrund, Vulkankegel im Hintergrund">
-            <a href="https://github.com/franzwagner7"><img class="user" src="images/user.png" class="shadow" alt="Elefant"></a>
+            <a href="https://github.com/franzwagner7"><img class="user" src="images/user.png" class="shadow"
+                    alt="Elefant"></a>
         </header>
         <article>
             <h1>Neuseelandreise</h1>
@@ -37,7 +46,8 @@
                 </p>
                 <figure>
                     <img src="images/attraction.jpg" alt="See vor Bergen">
-                    </i><figcaption><i class="fa-solid fa-camera-retro"></i>Blick auf die Emerald Lakes. Bild: <a
+                    </i>
+                    <figcaption><i class="fa-solid fa-camera-retro"></i>Blick auf die Emerald Lakes. Bild: <a
                             href="https://pixabay.com/de/photos/kanada-emerald-lake-landschaft-see-4433005/">XPics</a>
                     </figcaption>
                 </figure>
@@ -57,12 +67,24 @@
         </article>
         <footer>
             <nav>
-                <a class="back" href="https://mobulu.github.io/nz/index.html"><i class="fa-solid fa-arrow-left-long"></i>vorhergehende Etappe</a>
-                <a class="next" href="https://helli07.github.io/nz/index.html">nächste Etappe<i class="fa-solid fa-arrow-right-long"></i></a>
+                <a class="back" href="https://mobulu.github.io/nz/index.html"><i
+                        class="fa-solid fa-arrow-left-long"></i>vorhergehende Etappe</a>
+                <a class="next" href="https://helli07.github.io/nz/index.html">nächste Etappe<i
+                        class="fa-solid fa-arrow-right-long"></i></a>
             </nav>
         </footer>
     </main>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+    </script>
 
 </body>
 
