@@ -19,6 +19,8 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!-- Kartenscript -->
+    <script defer src="main.js"></script>
 
 </head>
 
@@ -74,17 +76,6 @@
             </nav>
         </footer>
     </main>
-    <script>
-        var map = L.map('map').setView([-39.195, 175.620],5);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-39.195, 175.620]).addTo(map)
-            .bindPopup('Tongariro Nationalpark')
-            .openPopup();
-    </script>
 
 </body>
 
